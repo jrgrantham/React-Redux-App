@@ -59,7 +59,7 @@ html {
 .largeImage {
   width: 90%;
   border-radius: 15px;
-  margin-bottom: 15px;
+  /* margin-bottom: 15px; */
 }
 
 div {
