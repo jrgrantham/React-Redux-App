@@ -1,25 +1,21 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { connect } from "react-redux";
-import { getCharacters, addToFavourites } from "../state/actionCreators";
+import { getCharacters, removeFromFavourites } from "../state/actionCreators";
 
 
-const AllCharacters = props => {
-
-  useEffect(() => {
-    props.getCharacters();
-  }, [])
+const FavCharacters = props => {
 
   return (
-    <div>
-      <h2>All Characters</h2>
+    <div className='favCharacters'>
+      <h2>Favourite Characters</h2>
       <div>
-        {props.rickAndMorty.characters.map(character => {
+        {props.rickAndMorty.favourites.map(character => {
           return (
-            <div key={character.id}>
+            <div className='favCharacterCard' key={character.id}>
               <h6>{character.name}</h6>
               <img src={character.image} alt={character.name} />
-              <button onClick={() => props.addToFavourites(character)} >Add to Favourites</button>
-            </div>
+              <button onClick={() => props.removeFromFavourites(character)} >Remove</button>
+            </div> 
           );
         })}
       </div>
@@ -29,5 +25,5 @@ const AllCharacters = props => {
 
 export default connect(
   state => state, 
-  {getCharacters, addToFavourites},
-)(AllCharacters);
+  {getCharacters, removeFromFavourites},
+)(FavCharacters);

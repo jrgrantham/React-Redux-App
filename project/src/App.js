@@ -1,14 +1,19 @@
 import React from "react";
 import "./App.css";
 import { connect } from "react-redux";
-import Characters from "./components/AllCharacters";
+import AllCharacters from "./components/AllCharacters";
+import FavCharacters from "./components/FavCharacters";
+import Header from "./components/Header";
 
-function App(characters) {
+function App() {
   return (
     <div className="App">
-      <h1>Ricky and Morty Fan Club</h1>
-      <div>
-        <Characters />
+      <div className="mainSite">
+        <Header />
+        <div className="siteContent">
+          <AllCharacters />
+          <FavCharacters />
+        </div>
       </div>
     </div>
   );

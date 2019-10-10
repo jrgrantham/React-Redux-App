@@ -10,12 +10,12 @@ export function addToFavourites(character) {
   };
 }
 
-// export function removeFromFavourites() {
-//   return {
-//     type: types.ADD_FAVOURITE,
-//     payload: character
-//   };
-// }
+export function removeFromFavourites(character) {
+  return {
+    type: types.REMOVE_FAVOURITE,
+    payload: character
+  };
+}
 
 export const getCharacters = () => dispatch => {
   axios
