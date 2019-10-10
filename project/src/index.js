@@ -8,7 +8,7 @@ import * as serviceWorker from './serviceWorker';
 import { characterReducer } from './state/reducers'
 
 const monsterReducer = combineReducers({
-  characters: characterReducer,
+  rickAndMorty: characterReducer,
 })
 
 const store = createStore(
