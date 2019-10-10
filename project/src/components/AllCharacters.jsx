@@ -13,7 +13,7 @@ const AllCharacters = props => {
       <div>
         {props.rickAndMorty.characters.map(character => {
           return (
-            <div className="allCharacterCard" key={character.id}>
+            <div className="allCharacter Card" key={character.id}>
               <div>
                 <img
                   className="smallImage"
