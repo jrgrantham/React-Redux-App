@@ -3,10 +3,10 @@ import * as types from "./actionTypes";
 
 const characterApi = "https://rickandmortyapi.com/api/character/";
 
-export function addToFavourites() {
+export function addToFavourites(character) {
   return {
     type: types.ADD_FAVOURITE,
-    // payload: character
+    payload: character
   };
 }
 
