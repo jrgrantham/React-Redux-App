@@ -1,0 +1,78 @@
+html {
+  background-color: #252525;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+
+.mainSite {
+  width: 80%;
+}
+
+.header {
+  border: 5px solid lightblue;
+  border-radius: 20px;
+  color: lightblue;
+}
+
+.siteContent {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.allCharacters {
+  width: 45%;
+}
+
+.favCharacters {
+  width: 45%;
+}
+
+.Card {
+  display: flex;
+  padding: 10px;
+  background-color: lightblue;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.favCharacter {
+  flex-direction: column;
+  align-items: center;
+}
+
+.cardInfo {
+  width: 100%;
+}
+
+.smallImage {
+  width: 100px;
+  border-radius: 10px;
+}
+
+.largeImage {
+  width: 90%;
+  border-radius: 15px;
+}
+
+div {
+  /* border: 1px solid red; */
+}
+
+button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border-color: lightblue;
+  color: lightblue;
+  background-color: #252525;
+}
+
+h2 {
+  color: lightblue;
+}
