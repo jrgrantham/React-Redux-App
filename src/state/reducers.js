@@ -10,14 +10,18 @@ export function characterReducer(state = initialState, action) {
     case actionTypes.ADD_FAVOURITE:
       return {
         ...state,
-        favourites: [...state.favourites, action.payload]
+        favourites: [...state.favourites, action.payload],
+        characters: state.characters.filter(
+          character => character.id !== action.payload.id
+        )
       };
     case actionTypes.REMOVE_FAVOURITE:
       return {
         ...state,
         favourites: state.favourites.filter(
-          character => character.id !== action.payload.id
-        )
+          character => character.id !== action.payload.id,
+        ),
+        characters: [...state.characters, action.payload]
       };
     case actionTypes.IMPORT_CHARACTERS:
       return {
